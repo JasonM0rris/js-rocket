@@ -14,7 +14,7 @@ var car = {
     this.isTurnedOn = true;
   },
   fly: function() {
-    alert('fly');
+    alert('Boo-yah!');
   },
   switchCar: function(isOn) {
     console.log('turn car' +isOn);
