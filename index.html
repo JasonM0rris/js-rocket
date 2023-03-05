@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>JS Rocket</title>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <h1>Hello JS Rocket!</h1>
-    <a href="#" onclick="doCoolStuff();">Click me</a>
-    <div class="cool" id="cool">
-      <p>Hello I'm cool.</p>
-    </div>
 
+<head>
+    <meta charset="utf-8">
+    <title>Space Launch Sequence!</title>
+    <<link rel="stylesheet" type="text/css" href="css/spaceship.css">
+        <script type="text/javascript" src="js/spaceship.js"></script>
+</head>
+
+<body class="body-state1">
+    <div class="left">
+        <div class="interface state1">
+            <h1>Space Launch!</h1>
+            <a href="#" class="button" onclick="changeState(2);">Launch!</a>
+        </div>
+        <div class="interface state2">
+            <h1 id="countdown">10</h1>
+            <a href="#" onclick="changeState(1);">Abort!</a>
+        </div>
+        <div class="interface state3">
+            <h1>Lift Off!</h1>
+        </div>
+        <div class="interface state4">
+            <h1>Well done!</h1>
+            <a href="#" clas="button" onclick="changeState(1);">Do it again!</a>
+        </div>
+        <div class="interface state5">
+            <h1>Oh no!!!</h1>
+            <a href="#" clas="button" onclick="changeState(1);">Try again!</a>
+        </div>
     </div>
-  </body>
+    <div class="right">
+        <div class="ground"> </div>
+        <div class="rocket"> </div>
+        <div class="nervous" id="nervous"></div>
+        <div class="cantwait" id="cantwait"></div>
+    </div>
+</body>
+
 </html>
