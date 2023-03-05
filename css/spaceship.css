@@ -1,0 +1,144 @@
+body {
+    font-family: 'helvetica', 'arial', sans-serif;
+}
+
+.left {
+    background-color: aquamarine;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    background-color: white;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.interface {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.ground {
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+
+}
+
+.nervous {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    margin-left: 32px;
+    background: url('../img/nervous.png') no-repeat 0 0;
+    width: 86px;
+    height: 48px;
+    display: none;
+}
+
+.nervous.show {
+    display: block;
+}
+
+.cantwait {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    margin-left: -125px;
+    background: url('../img/cantwait.png') no-repeat 0 0;
+    width: 86px;
+    height: 48px;
+    display: none;
+}
+
+.cantwait.show {
+    display: block;
+}
+
+.rocket {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 153px;
+    height: 237px;
+    margin-left: -76.5px;
+    background: url('../img/ship01.gif') no-repeat 0 0;
+    transition: bottom 5000ms;
+}
+
+/* ricket bg image */
+
+body.body-state2 .rocket {
+    background-image: url('../img/ship02.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+    background-image: url('../img/ship03.gif');
+}
+
+body.body-state5 .rocket {
+    background-image: url('../img/kaboom.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+    bottom: 900px;
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5 {
+    display: none;
+}
+
+body.body-state1 .state1 {
+    display: block;
+}
+
+body.body-state2 .state2 {
+    display: block;
+}
+
+body.body-state3 .state3 {
+    display: block;
+}
+
+body.body-state4 .state4 {
+    display: block;
+}
+
+body.body-state5 .state5 {
+    display: block;
+}
+
+a.button {
+    display: inline-block;
+    background-color: white;
+    font-weight: 600;
+    color: black;
+    padding: 40px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 300ms;
+}
+
+a:hover {
+    color: red;
+}

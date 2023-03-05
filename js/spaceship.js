@@ -9,12 +9,27 @@ var changeState = function(state) {
     //countdown
     if (state == 2) {
         timer = setInterval(function() {
-            document.getElementById('countdown').innerHTML = countdownNumber;
             countdownNumber = countdownNumber - 1;
+            document.getElementById('countdown').innerHTML = countdownNumber;
+
+            if (countdownNumber > 1 && countdownNumber <= 4) {
+                // be nervous
+                document.getElementById('nervous').className = 'nervous show';
+            } else {
+                document.getElementById('nervous').className = 'nervous';
+            }
+
+            if (countdownNumber > 4 && countdownNumber <= 7) {
+                // can't wait
+                document.getElementById('cantwait').className = 'cantwait show';
+            } else {
+                document.getElementById('cantwait').className = 'cantwait';
+            }
+
             if (countdownNumber <= 0) {
                 changeState(3);
             };
-        }, 500);
+        }, 1000);
 
     } else if (state == 3) {
         var success = setTimeout(function() {
