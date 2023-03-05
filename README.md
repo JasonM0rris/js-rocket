@@ -1,2 +1,2 @@
 # js-rocket
-Launch rocket with JS
+Fun play around with Java Script
